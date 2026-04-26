@@ -1,0 +1,19 @@
+name: 'dbt_federal_ops'
+version: '1.0.0'
+config-version: 2
+
+profile: 'federal_ops_profile'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+snapshot-paths: ["snapshots"]
+
+models:
+  dbt_federal_ops:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+      
