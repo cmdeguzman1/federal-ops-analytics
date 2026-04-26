@@ -205,3 +205,12 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# --- Project Specific Customizations ---
+.dbt/
+dbt_federal_ops/logs/
+dbt_federal_ops/target/
+*.yml.bak
+# Ignore large raw data files if you download them locally
+*.csv
+*.xlsx
