@@ -1,6 +1,8 @@
 create or replace view staff_master as
 select
     nullif(trim("Staff_ID"), '') as "staff_id",
+    split_part(trim("Full_Name"), ' ', 1) as "first_name",
+    split_part(trim("Full_Name"), ' ', 2) as "last_name",
     nullif(trim("Full_Name"), '') as "full_name",
     nullif(trim("Project_Name"), '') as "project_name",
     nullif(trim("Department"), '') as "department",
